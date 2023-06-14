@@ -6,7 +6,7 @@ import comperssion from 'compression';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import { config } from './config/config';
-import router from 'router';
+import router from './router';
 
 
 const app = express();
@@ -33,3 +33,7 @@ mongoose
 
     app.use('/',router());
 
+app.listen(3100,()=>{
+    console.log(`server on 3100 `);
+    
+})
